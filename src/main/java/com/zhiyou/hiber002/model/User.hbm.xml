@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 2017-9-6 14:40:31 by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+
+<class
+    name="com.zhiyou.hiber002.model.User"
+    table="user"
+    catalog="web"
+    optimistic-lock="version"
+>
+
+	<id 
+        name="userId"
+        type="java.lang.Integer"
+    >
+    
+<column name="user_id" />
+	    <generator class="identity" />
+    </id>
+
+
+
+
+    <property
+        name="username"
+	    type="string"
+    >
+<column name="username" length="8" not-null="true" >
+<comment>用户账号</comment>
+</column>  </property>
+
+    <property
+        name="password"
+	    type="string"
+    >
+<column name="password" length="20" not-null="true" >
+<comment>密码</comment>
+</column>  </property>
+
+    <property
+        name="isAdmin"
+	    type="boolean"
+    >
+<column name="is_admin" not-null="true" >
+<comment>是否是管理员</comment>
+</column>  </property>
+
+    <property
+        name="isSystem"
+	    type="java.lang.Boolean"
+    >
+<column name="is_system" >
+<comment>0</comment>
+</column>  </property>
+
+    <property
+        name="departmentId"
+	    type="java.lang.Integer"
+    >
+<column name="department_id" />
+  </property>
+
+    <property
+        name="roleId"
+	    type="java.lang.Integer"
+    >
+<column name="role_id" />
+  </property>
+
+    <property
+        name="isMale"
+	    type="java.lang.Boolean"
+    >
+<column name="is_male" />
+  </property>
+
+    <property
+        name="mobile"
+	    type="string"
+    >
+<column name="mobile" length="11" />
+  </property>
+
+    <property
+        name="address"
+	    type="string"
+    >
+<column name="address" length="50" />
+  </property>
+
+    <property
+        name="age"
+	    type="java.lang.Integer"
+    >
+<column name="age" />
+  </property>
+
+    <property
+        name="tel"
+	    type="string"
+    >
+<column name="tel" length="20" />
+  </property>
+
+    <property
+        name="idNum"
+	    type="string"
+    >
+<column name="id_num" length="20" />
+  </property>
+
+    <property
+        name="email"
+	    type="string"
+    >
+<column name="email" length="100" />
+  </property>
+
+    <property
+        name="qq"
+	    type="string"
+    >
+<column name="qq" length="15" />
+  </property>
+
+    <property
+        name="hobby"
+	    type="string"
+    >
+<column name="hobby" length="50" />
+  </property>
+
+    <property
+        name="education"
+	    type="java.lang.Byte"
+    >
+<column name="education" />
+  </property>
+
+    <property
+        name="cardNum"
+	    type="string"
+    >
+<column name="card_num" length="20" />
+  </property>
+
+    <property
+        name="nation"
+	    type="string"
+    >
+<column name="nation" length="20" />
+  </property>
+
+    <property
+        name="marry"
+	    type="java.lang.Byte"
+    >
+<column name="marry" />
+  </property>
+
+    <property
+        name="status"
+	    type="java.lang.Byte"
+    >
+<column name="status" />
+  </property>
+
+    <property
+        name="remark"
+	    type="string"
+    >
+<column name="remark" length="100" />
+  </property>
+
+    <property
+        name="createTime"
+	    type="timestamp"
+    >
+<column name="create_time" length="19" />
+  </property>
+
+    <property
+        name="creater"
+	    type="java.lang.Integer"
+    >
+<column name="creater" />
+  </property>
+
+    <property
+        name="updateTime"
+	    type="timestamp"
+    >
+<column name="update_time" length="19" />
+  </property>
+
+    <property
+        name="updater"
+	    type="java.lang.Integer"
+    >
+<column name="updater" />
+  </property>
+
+
+</class>
+
+</hibernate-mapping>

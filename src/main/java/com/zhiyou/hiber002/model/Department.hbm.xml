@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 2017-9-6 14:40:31 by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+
+<class
+    name="com.zhiyou.hiber002.model.Department"
+    table="department"
+    catalog="web"
+    optimistic-lock="version"
+>
+
+	<id 
+        name="departmentId"
+        type="java.lang.Integer"
+    >
+    
+<column name="department_id" />
+	    <generator class="identity" />
+    </id>
+
+
+
+
+    <property
+        name="departmentName"
+	    type="string"
+    >
+<column name="department_name" length="15" >
+<comment>部门名称</comment>
+</column>  </property>
+
+    <property
+        name="departmentDesc"
+	    type="string"
+    >
+<column name="department_desc" length="100" >
+<comment>部门描述</comment>
+</column>  </property>
+
+    <property
+        name="status"
+	    type="java.lang.Byte"
+    >
+<column name="status" >
+<comment>部门状态</comment>
+</column>  </property>
+
+    <property
+        name="remark"
+	    type="string"
+    >
+<column name="remark" length="200" />
+  </property>
+
+    <property
+        name="createTime"
+	    type="timestamp"
+    >
+<column name="create_time" length="19" />
+  </property>
+
+    <property
+        name="creater"
+	    type="java.lang.Integer"
+    >
+<column name="creater" />
+  </property>
+
+    <property
+        name="updateTime"
+	    type="timestamp"
+    >
+<column name="update_time" length="19" />
+  </property>
+
+    <property
+        name="updater"
+	    type="java.lang.Integer"
+    >
+<column name="updater" />
+  </property>
+
+
+</class>
+
+</hibernate-mapping>

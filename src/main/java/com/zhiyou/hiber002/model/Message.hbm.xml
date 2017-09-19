@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 2017-9-6 14:40:31 by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+
+<class
+    name="com.zhiyou.hiber002.model.Message"
+    table="message"
+    catalog="web"
+    optimistic-lock="version"
+>
+
+	<id 
+        name="messageId"
+        type="java.lang.Integer"
+    >
+    
+<column name="message_id" />
+	    <generator class="identity" />
+    </id>
+
+
+
+
+    <property
+        name="subject"
+	    type="string"
+    >
+<column name="subject" length="50" />
+  </property>
+
+    <property
+        name="content"
+	    type="string"
+    >
+<column name="content" length="2000" />
+  </property>
+
+    <property
+        name="sender"
+	    type="java.lang.Integer"
+    >
+<column name="sender" />
+  </property>
+
+    <property
+        name="saveTime"
+	    type="timestamp"
+    >
+<column name="save_time" length="19" />
+  </property>
+
+    <property
+        name="sendTime"
+	    type="timestamp"
+    >
+<column name="send_time" length="19" />
+  </property>
+
+    <property
+        name="sendDelete"
+	    type="java.lang.Integer"
+    >
+<column name="send_delete" />
+  </property>
+
+    <property
+        name="sendStatus"
+	    type="java.lang.Integer"
+    >
+<column name="send_status" />
+  </property>
+
+    <property
+        name="sendUpdateTime"
+	    type="timestamp"
+    >
+<column name="send_update_time" length="19" />
+  </property>
+
+    <property
+        name="receiver"
+	    type="java.lang.Integer"
+    >
+<column name="receiver" />
+  </property>
+
+    <property
+        name="receiveDelete"
+	    type="java.lang.Integer"
+    >
+<column name="receive_delete" />
+  </property>
+
+    <property
+        name="receiveStatus"
+	    type="java.lang.Integer"
+    >
+<column name="receive_status" />
+  </property>
+
+    <property
+        name="receiveUpdateTime"
+	    type="timestamp"
+    >
+<column name="receive_update_time" length="19" />
+  </property>
+
+
+</class>
+
+</hibernate-mapping>

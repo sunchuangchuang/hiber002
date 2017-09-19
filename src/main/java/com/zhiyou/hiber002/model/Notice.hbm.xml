@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 2017-9-6 14:40:31 by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+
+<class
+    name="com.zhiyou.hiber002.model.Notice"
+    table="notice"
+    catalog="web"
+    optimistic-lock="version"
+>
+
+	<id 
+        name="noticeId"
+        type="java.lang.Integer"
+    >
+    
+<column name="notice_id" />
+	    <generator class="identity" />
+    </id>
+
+
+
+
+    <property
+        name="receiveId"
+	    type="int"
+    >
+<column name="receive_id" not-null="true" />
+  </property>
+
+    <property
+        name="subject"
+	    type="string"
+    >
+<column name="subject" length="30" not-null="true" />
+  </property>
+
+    <property
+        name="text"
+	    type="string"
+    >
+<column name="text" length="65535" not-null="true" />
+  </property>
+
+    <property
+        name="pubTime"
+	    type="timestamp"
+    >
+<column name="pub_time" length="19" />
+  </property>
+
+    <property
+        name="expireTime"
+	    type="timestamp"
+    >
+<column name="expire_time" length="19" />
+  </property>
+
+    <property
+        name="status"
+	    type="byte"
+    >
+<column name="status" not-null="true" />
+  </property>
+
+    <property
+        name="remark"
+	    type="string"
+    >
+<column name="remark" length="50" />
+  </property>
+
+    <property
+        name="createTime"
+	    type="timestamp"
+    >
+<column name="create_time" length="19" not-null="true" />
+  </property>
+
+    <property
+        name="creater"
+	    type="int"
+    >
+<column name="creater" not-null="true" />
+  </property>
+
+    <property
+        name="updateTime"
+	    type="timestamp"
+    >
+<column name="update_time" length="19" />
+  </property>
+
+    <property
+        name="updater"
+	    type="java.lang.Integer"
+    >
+<column name="updater" />
+  </property>
+
+
+</class>
+
+</hibernate-mapping>
